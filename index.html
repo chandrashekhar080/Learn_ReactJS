@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello CSG</h1>
+    <button type="button" id="btn">Click Me !</button><span id="txt">0</span>
+    <script>
+        const btn = document.getElementById("btn");
+
+        const txtArea = document.getElementById("txt");
+
+        btn.addEventListener("click" , () => {
+            const val = parseInt(txtArea.textContent);
+            txtArea.textContent = val + 1;
+
+        });
+    </script>
+</body>
+</html>
