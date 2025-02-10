@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <!-- react.creatElement({name/type}{prop}{children}){
+
+    } 
+        react.creatElement({button}, {}, {"Click Me!"}){
+        
+        }get A Object of JS For React  
+    -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> 
+    <!-- //first one for use components and web  -->
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+<!-- // second one for use dom and app also -->
+<script>
+   // javaScript
+    const root = document.getElementById('container');
+    console.log(root);
+    //React JS
+  //  reactDom.createRoot(root);
+  const rootNode = ReactDOM.createRoot(root);
+
+ // rootNode.render(React.createElement('h1',{},'Hello Wolrd!'));
+
+//   rootNode.render(
+//     React.createElement('button',{},'Click Me!')
+//   );
+
+
+//now we have two use more then one children parent
+rootNode.render(React.createElement('div',{},(React.createElement('h1',{},(React.createElement('button',{},'I am a Button'))))));
+
+//rootNode.render(React.createElement('div',{},'i am a Div',(React.createElement('h1',{},'I am a H1',(React.createElement('button',{},'I am a Button'))))));
+
+</script>
+</body>
+</html>
