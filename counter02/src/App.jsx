@@ -7,7 +7,12 @@ function App() {
 
   const addValue = () => {
     if(count<20){
-      setCount(count+1);
+      //when we have to run one task repetedly what react do react take a bunch of that repeated work and do only once
+      setCount(precount => precount + 1);
+      setCount(precount => precount + 1);
+      setCount(precount => precount + 1);
+      setCount(precount => precount + 1);
+      //sp we get the value at the end callback that is currCount +1*4 = curr+4
     } else {
       alert('Limit Exit');
     }
@@ -15,7 +20,13 @@ function App() {
 
   const removeValue = () => {
     if(count>0){
-      setCount(count-1);
+      //But when we give a call back in setCount so we give not an instruction or bunch of work we give one by one callback
+      setCount(count-1); //same work repetedly
+      setCount(count-1); //same work repetedly
+      setCount(count-1); //same work repetedly
+      setCount(count-1); //same work repetedly
+      //so we know react take bunch and work once so we will get only -1 value
+     
     } else {
       alert('Limit Exit');
     }
